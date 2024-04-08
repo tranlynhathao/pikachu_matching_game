@@ -159,23 +159,64 @@ void menuGame()
 	}
 	if (cursor == 5) // show rank of player
 	{
-		HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
-		SetConsoleTextAttribute(color, 0x07);
+		SetConsoleTextAttribute(color, 0x01);
 		system("cls");
-		cout << "Ranking Score" << endl;
-		cout << "------------------------" << endl;
-		cout << "Normal-Mode: " << endl;
+		// print leaderboard
+		cout << "                            " << " _      ______          _____  ______ _____  ____   ____          _____  _____  " << endl;
+		cout << "                            " << "| |    |  ____|   /\\   |  __ \\|  ____|  __ \\|  _ \\ / __ \\   /\\   |  __ \\|  __ \\ " << endl;
+		cout << "                            " << "| |    | |__     /  \\  | |  | | |__  | |__) | |_) | |  | | /  \\  | |__) | |  | |" << endl;
+		cout << "                            " << "| |    |  __|   / /\\ \\ | |  | |  __| |  _  /|  _ <| |  | |/ /\\ \\ |  _  /| |  | |" << endl;
+		cout << "                            " << "| |____| |____ / ____ \\| |__| | |____| | \\ \\| |_) | |__| / ____ \\| | \\ \\| |__| |" << endl;
+		cout << "                            " << "|______|______/_/    \\_\\_____/|______|_|  \\_\\____/ \\____/_/    \\_\\_|  \\_\\_____/ " << endl;
+		cout << endl; 
+		cout << "                            " << " -------------------------------------------------------------------------------" << endl;
+		cout << "                            " << "|                                                                               |" << endl;
+		cout << "                            " << "|                                  ";
+		SetConsoleTextAttribute(color, 0x06);
+		cout << "Normal-Mode                                  ";
+		SetConsoleTextAttribute(color, 0x01);
+		cout <<	"|" << endl;
+		cout << "                            " << "|                                                                               |" << endl;
 		readFile("Text/normal.txt");
-		cout << "------------------------" << endl;
-		cout << "Hard-Mode: " << endl;
+		cout << "                            " << "|                                                                               |" << endl;
+		cout << "                            " << " ------------------------------------------------------------------------------- " << endl << endl;
+		
+		cout << "                            " << " -------------------------------------------------------------------------------" << endl;
+		cout << "                            " << "|                                                                               |" << endl;
+		cout << "                            " << "|                                   ";
+		SetConsoleTextAttribute(color, 0x06);
+		cout << "Hard-Mode                                   ";
+		SetConsoleTextAttribute(color, 0x01);
+		cout <<	"|" << endl;
+		cout << "                            " << "|                                                                               |" << endl;
 		readFile("Text/Hard.txt");
-		cout << "------------------------" << endl;
-		cout << "Fun-Mode: " << endl;
+		cout << "                            " << "|                                                                               |" << endl;
+		cout << "                            " << " ------------------------------------------------------------------------------- " << endl << endl;
+		
+		cout << "                            " << " -------------------------------------------------------------------------------" << endl;
+		cout << "                            " << "|                                                                               |" << endl;
+		cout << "                            " << "|                                    ";
+		SetConsoleTextAttribute(color, 0x06);
+		cout << "Fun-Mode                                   ";
+		SetConsoleTextAttribute(color, 0x01);
+		cout << "|" << endl;
+		cout << "                            " << "|                                                                               |" << endl;
 		readFile("Text/fungame.txt");
-		cout << "------------------------" << endl;
-		cout << "Hidden-Mode: " << endl;
+		cout << "                            " << "|                                                                               |" << endl;
+		cout << "                            " << " ------------------------------------------------------------------------------- " << endl << endl;
+
+		cout << "                            " << " -------------------------------------------------------------------------------" << endl;
+		cout << "                            " << "|                                                                               |" << endl;
+		cout << "                            " << "|                                  ";
+		SetConsoleTextAttribute(color, 0x06);
+		cout << "Hidden-Mode                                  ";
+		SetConsoleTextAttribute(color, 0x01);
+		cout << "|" << endl;
+		cout << "                            " << "|                                                                               |" << endl;
 		readFile("Text/hidden.txt");
-		cout << "------------------------" << endl;
+		cout << "                            " << "|                                                                               |" << endl;
+		cout << "                            " << " ------------------------------------------------------------------------------- " << endl << endl;
+
 		system("pause");
 		return menuGame();
 	}
@@ -199,10 +240,10 @@ int main()
 	cout << " |_|  |_|\\__,_/_/\\_\\_|_| |_| |_|_/___\\___|" << endl << endl;
 	system("pause");
 	SetConsoleTextAttribute(color, 0x07);
-	menuGame();
+	menuGame(); // call menu to start game
 	system("cls");
 	SetConsoleTextAttribute(color, 0x09);
-	cout << "Thank for playing, Love you <333333" << endl;
+	cout << "Thank for playing, Love you <333333" << endl; // when exit game
 	SetConsoleTextAttribute(color, 0x07);
 
 	return 0;

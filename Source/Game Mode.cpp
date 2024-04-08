@@ -218,6 +218,7 @@ void EasyGame()
 	system("cls");
 	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(color, 0x01);
+	// print pokemon with score
 	cout << "\t";
 	cout << "                                  ,'\\" << endl;
 	cout << "\t";
@@ -486,6 +487,7 @@ void FunGame()
 	system("cls");
 	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(color, 0x01);
+	// print pokemon with score
 	cout << "\t";
 	cout << "                                  ,'\\" << endl;
 	cout << "\t";
@@ -801,6 +803,7 @@ void HardGame()
 	system("cls");
 	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(color, 0x01);
+	// print pokemon with score
 	cout << "\t";
 	cout << "                                  ,'\\" << endl;
 	cout << "\t";
@@ -1052,6 +1055,7 @@ void HiddenGame()
 	system("cls");
 	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(color, 0x01);
+	// print pokemon with score
 	cout << "\t";
 	cout << "                                  ,'\\" << endl;
 	cout << "\t";

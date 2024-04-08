@@ -395,7 +395,7 @@ void repBoardHidden(char** a, int m, int n, int px, int py, int x1, int y1, int 
 		}
 		for (int j = 1; j < 9; j++)
 		{
-			if (a[i][j] != ' ')
+			if (a[i][j] != ' ') // draw all white only draw color with x1, x2
 			{
 				if ((i == x1 && j == y1) || (i == x2 && j == y2))
 				{
@@ -451,7 +451,7 @@ void repBoardHidden(char** a, int m, int n, int px, int py, int x1, int y1, int 
 
 		for (int j = 1; j < 9; j++)
 		{
-			if (a[i][j] != ' ')
+			if (a[i][j] != ' ')// draw all white only draw color with x1, x2
 			{
 				if ((i == x1 && j == y1) || (i == x2 && j == y2))
 				{
@@ -533,7 +533,7 @@ void repBoardHidden(char** a, int m, int n, int px, int py, int x1, int y1, int 
 
 		for (int j = 1; j < 9; j++)
 		{
-			if (a[i][j] != ' ')
+			if (a[i][j] != ' ')// draw all white only draw color with x1, x2
 			{
 				if ((i == x1 && j == y1) || (i == x2 && j == y2))
 				{
@@ -614,7 +614,7 @@ void repBoardHidden(char** a, int m, int n, int px, int py, int x1, int y1, int 
 
 		for (int j = 1; j < 9; j++)
 		{
-			if (a[i][j] != ' ')
+			if (a[i][j] != ' ')// draw all white only draw color with x1, x2
 			{
 				if ((i == x1 && j == y1) || (i == x2 && j == y2))
 				{
@@ -696,7 +696,7 @@ void repBoardHidden(char** a, int m, int n, int px, int py, int x1, int y1, int 
 
 		for (int j = 1; j < 9; j++)
 		{
-			if (a[i][j] != ' ')
+			if (a[i][j] != ' ')// draw all white only draw color with x1, x2, y1, y2
 			{
 				if ((i == x1 && j == y1) || (i == x2 && j == y2))
 				{
@@ -711,7 +711,6 @@ void repBoardHidden(char** a, int m, int n, int px, int py, int x1, int y1, int 
 			if (a[i][j] == ' ')
 				cout << "         ";
 		}
-		// draw W A S D R F button in the right
 		SetConsoleTextAttribute(color, 0x0C);
 		cout << "         ";
 		if (check && i == 1)

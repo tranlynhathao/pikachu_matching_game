@@ -126,22 +126,22 @@ void moveSuggestionHidden(char** a, int x, int y)
 				{
 					if (checkI(a, i, j, k, l) && (a[i][j] == a[k][l]) && !(i == k && j == l))
 					{
-						repBoardHidden(a, 10, 10, x, y, i, j, k, l);
+						repBoardHidden(a, 10, 10, x, y, i, j, k, l); // to mau hidden
 						return;
 					}
 					else if (checkZ(a, i, j, k, l) && (a[i][j] == a[k][l]) && !(i == k && j == l))
 					{
-						repBoardHidden(a, 10, 10, x, y, i, j, k, l);
+						repBoardHidden(a, 10, 10, x, y, i, j, k, l); // to mau hidden
 						return;
 					}
 					else if (checkL(a, i, j, k, l) && (a[i][j] == a[k][l]) && !(i == k && j == l))
 					{
-						repBoardHidden(a, 10, 10, x, y, i, j, k, l);
+						repBoardHidden(a, 10, 10, x, y, i, j, k, l); // to mau hidden
 						return;
 					}
 					else if (checkU(a, i, j, k, l) && (a[i][j] == a[k][l]) && !(i == k && j == l))
 					{
-						repBoardHidden(a, 10, 10, x, y, i, j, k, l);
+						repBoardHidden(a, 10, 10, x, y, i, j, k, l); // to mau hidden
 						return;
 					}
 				}

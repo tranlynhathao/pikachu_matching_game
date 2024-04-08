@@ -2,6 +2,8 @@
 
 void readFile(string name)
 {
+	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(color, 0x01);
 	// read file to print ranking board
 	ifstream in;
 	in.open(name);
@@ -13,9 +15,13 @@ void readFile(string name)
 	char temp[20];
 	in.getline(temp, 20, '\n');
 	int n = 0;
-	if (in.eof())
+	if (in.eof()) // check empty
 	{
-		cout << "No one play this mode" << endl;
+		cout << "                            " << "|                             ";
+		SetConsoleTextAttribute(color, 0x06);
+		cout << "No one play this mode !!                          ";
+		SetConsoleTextAttribute(color, 0x01);
+		cout << "|" << endl;
 		return;
 	}
 	Storage* store = new Storage[5]; // only print top 5
@@ -26,12 +32,29 @@ void readFile(string name)
 		in.ignore();
 		n++;
 	}
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < n; i++) // 21 + 23 + strlen(name)
 	{
-		cout << "Top " << i + 1 << ": " << store[i].name << " with " << store[i].score << " seconds" << endl;
+		cout << "                            |";
+		int len = 80 - (26 + 23 + strlen(store[i].name)); // count blank have to fill
+		if (store[i].score < 10)
+		{
+			len += 1;
+		}
+		if (store[i].score >= 100)
+		{
+			len--;
+		}
+		cout << "                        ";
+		SetConsoleTextAttribute(color, 0x06);
+		cout << " Top " << i + 1 << ": " << store[i].name << " with " << store[i].score << " seconds";
+		SetConsoleTextAttribute(color, 0x01);
+		for (int i = 0; i < len; i++)
+		{
+			cout << " ";
+		}
+		cout << "|" << endl;
 	}
 }
-
 void inputAndPrintFile(string namef, char a[100], int time)
 {
 	//read file and then sort with seconds then print file

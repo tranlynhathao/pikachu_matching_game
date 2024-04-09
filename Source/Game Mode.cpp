@@ -87,17 +87,7 @@ void EasyGame()
 		}
 		if (getCommand == 'r')
 		{
-			if (pHead == nullptr) // if no have arr to redo -> continue
-			{
-				continue;
-			}
-			for (int i = 0; i < 10; i++)
-			{
-				for (int j = 0; j < 10; j++)
-				{
-					a[i][j] = pHead->b[i][j]; // get the latest array to a
-				}
-			}
+			redo(pHead, a);
 			removeHead(pHead); // remove the latest array
 			continue;
 		}
@@ -336,17 +326,7 @@ void FunGame()
 		}
 		if (getCommand == 'r')
 		{
-			if (pHead == nullptr)// if no have arr to redo -> continue
-			{
-				continue;
-			}
-			for (int i = 0; i < 10; i++)
-			{
-				for (int j = 0; j < 10; j++)
-				{
-					a[i][j] = pHead->b[i][j];// get the latest array to a
-				}
-			}
+			redo(pHead, a);
 			removeHead(pHead);// remove the latest array
 			continue;
 		}
@@ -651,17 +631,7 @@ void HardGame()
 		}
 		if (getCommand == 'r')
 		{
-			if (pHead == nullptr)
-			{
-				continue;
-			}
-			for (int i = 0; i < 10; i++)
-			{
-				for (int j = 0; j < 10; j++)
-				{
-					a[i][j] = pHead->b[i][j];
-				}
-			}
+			redo(pHead, a);
 			removeHead(pHead);
 			continue;
 		}
@@ -924,17 +894,7 @@ void HiddenGame()
 		}
 		if (getCommand == 'r')
 		{
-			if (pHead == nullptr) // if no have arr to redo -> continue
-			{
-				continue;
-			}
-			for (int i = 0; i < 10; i++)
-			{
-				for (int j = 0; j < 10; j++)
-				{
-					a[i][j] = pHead->b[i][j]; // get the latest array to a
-				}
-			}
+			redo(pHead, a);
 			removeHead(pHead); // remove the latest array
 			continue;
 		}

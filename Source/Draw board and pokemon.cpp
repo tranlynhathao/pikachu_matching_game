@@ -4,7 +4,7 @@ void set_color(int code) {
 	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(color, code);
 }
-void repColor(char c) {// ham bieu dien mau tuy vao o
+void repColor(char c) { // the function represents color depending on the tile.
 	switch (c)
 	{
 	case 'A':

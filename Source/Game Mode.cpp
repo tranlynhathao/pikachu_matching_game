@@ -1,6 +1,6 @@
 #include "Game Mode.h"
 
-// Game mode
+// Game mode pikachu
 void EasyGame()
 {
 	srand(time(0)); // to random
@@ -19,7 +19,7 @@ void EasyGame()
 	int x = 1, y = 1, x1 = -1, y1 = -1, x2 = -1, y2 = -1; // first position when start game
 	char getCommand = 0; // get keyboard is pressed
 	int countTimes = 0; // count time press enter (choose 2 to check)
-	Node* pHead = new Node; // linked list to Redo
+	Node* pHead = new Node; // linked list to Undo
 	pHead = nullptr;
 	bool checkMove = false; // if move suggestion run, not draw new board
 	while (!checkEmpty(a)) // check if empty -> end game
@@ -87,8 +87,8 @@ void EasyGame()
 		}
 		if (getCommand == 'r')
 		{
-			redo(pHead, a);
-			removeHead(pHead); // remove the latest array
+			undo(pHead, a);
+			removeHead(pHead);
 			continue;
 		}
 		if (getCommand == 13 && countTimes == 0 && a[x][y] != ' ') // enter first time move x1 y1 to x y address
@@ -261,7 +261,7 @@ void FunGame()
 	int x = 1, y = 1, x1 = -1, y1 = -1, x2 = -1, y2 = -1;// first position when start game
 	char getCommand = 0;// get keyboard is pressed
 	int countTimes = 0;// count time press enter (choose 2 to check)
-	Node* pHead = new Node;// linked list to Redo
+	Node* pHead = new Node;// linked list to Undo
 	pHead = nullptr;
 	bool checkMove = false;// if move suggestion run, not draw new board
 	while (!checkEmpty(a))// check if empty -> end game
@@ -326,7 +326,7 @@ void FunGame()
 		}
 		if (getCommand == 'r')
 		{
-			redo(pHead, a);
+			undo(pHead, a);
 			removeHead(pHead);// remove the latest array
 			continue;
 		}
@@ -631,7 +631,7 @@ void HardGame()
 		}
 		if (getCommand == 'r')
 		{
-			redo(pHead, a);
+			undo(pHead, a);
 			removeHead(pHead);
 			continue;
 		}
@@ -826,7 +826,7 @@ void HiddenGame()
 	int x = 1, y = 1, x1 = -1, y1 = -1, x2 = -1, y2 = -1; // first position when start game
 	char getCommand = 0; // get keyboard is pressed
 	int countTimes = 0; // count time press enter (choose 2 to check)
-	Node* pHead = new Node; // linked list to Redo
+	Node* pHead = new Node; // linked list to Undo
 	pHead = nullptr;
 	bool checkMove = false; // if move suggestion run, not draw new board
 	while (!checkEmpty(a)) // check if empty -> end game
@@ -894,7 +894,7 @@ void HiddenGame()
 		}
 		if (getCommand == 'r')
 		{
-			redo(pHead, a);
+			undo(pHead, a);
 			removeHead(pHead); // remove the latest array
 			continue;
 		}

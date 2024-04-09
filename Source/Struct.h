@@ -10,7 +10,7 @@ struct Storage {
     int score;     // Integer to store player's score
 };
 
-// Definition of a structure for a linked list node to Redo
+// Definition of a structure for a linked list node to Undo
 struct Node {
     char** b; // 2D array to store data
     Node* pNext;    // Pointer to the next node in the linked list

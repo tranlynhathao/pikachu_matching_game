@@ -1,5 +1,5 @@
 # Pikachu Matching Game
-![Interface](interface.png)
+![Interface](/image/interface.png)
 
 # Game Tutorial
 

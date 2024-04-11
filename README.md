@@ -1,4 +1,7 @@
 # Game Tutorial
+[report](https://drive.google.com/file/d/1lKwbwGE3PF02nhRmTN10Gqr77-5Ufra4/view?usp=sharing)
+
+---
 
 ## 1. Enlarge the Console Screen
 - When the game starts, a violin music named "Senbonzakura" will be played until the main matching game interface officially begins.
@@ -56,4 +59,4 @@
 
 ---
 
-[report](https://drive.google.com/file/d/1lKwbwGE3PF02nhRmTN10Gqr77-5Ufra4/view?usp=sharing)
+![MIT LICENSE](license)

@@ -59,4 +59,4 @@
 
 ---
 
-[MIT LICENSE](license)
+[MIT LICENSE](LICENSE)

@@ -72,9 +72,9 @@ void EasyGame()
 		if (getCommand == 'v') // press v to enter giftcode
 		{
 			system("cls");
-			char code[10];
+			char code[20];
 			cout << "Enter giftcode: ";
-			cin.getline(code, 10);
+			cin.getline(code, 20);
 			if (strcmp(code, "CHUALANH") == 0)
 			{
 				for (int v = 0; v < 16; v++)

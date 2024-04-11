@@ -1,12 +1,10 @@
 #include "Draw board and pokemon.h"
 
-void set_color(int code)
-{
+void set_color(int code) {
 	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(color, code);
 }
-void repColor(char c)
-{ // the function represents color depending on the tile.
+void repColor(char c) {// ham bieu dien mau tuy vao o
 	switch (c)
 	{
 	case 'A':
@@ -46,7 +44,7 @@ void repColor(char c)
 	}
 	};
 }
-void repBoard(char **a, int m, int n, int px, int py, int x1, int y1, int x2, int y2)
+void repBoard(char** a, int m, int n, int px, int py, int x1, int y1, int x2, int y2)
 {
 	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE); // draw color
 	SetConsoleTextAttribute(color, 0x0C);
@@ -73,56 +71,39 @@ void repBoard(char **a, int m, int n, int px, int py, int x1, int y1, int x2, in
 		cout << "         ";
 		if (check && i == 1)
 		{
-			cout << "         "
-				 << "         "
-				 << " ------- "
-				 << "         "
-				 << "         "
-				 << " ------- ";
+			cout << "         " << "         " << " ------- " << "         " << "         " << " ------- ";
 		}
 		else if (check)
 		{
-			cout << "         "
-				 << " ------- "
-				 << " ------- "
-				 << " ------- "
-				 << "         "
-				 << " ------- ";
+			cout << "         " << " ------- " << " ------- " << " ------- " << "         " << " ------- ";
 		}
 		SetConsoleTextAttribute(color, 0x06);
 		if (i == 3)
 		{
-			cout << "         "
-				 << "                   _,..-----+-\".\".-'_,..";
+			cout << "         " << "                   _,..-----+-\".\".-'_,..";
 		}
 		if (i == 4)
 		{
-			cout << "         "
-				 << "      |  /,----._           ,.----.       .";
+			cout << "         " << "      |  /,----._           ,.----.       .";
 		}
 		if (i == 5)
 		{
-			cout << "         "
-				 << "j       | ,-\"'    `    .'         `. `        `.";
+			cout << "         " << "j       | ,-\"'    `    .'         `. `        `.";
 		}
 		if (i == 6)
 		{
-			cout << "         "
-				 << " \\       /                      `.    |              .";
+			cout << "         " << " \\       /                      `.    |              .";
 		}
 		if (i == 7)
 		{
-			cout << "         "
-				 << ".     .                         .'         `.__,.',.----,";
+			cout << "         " << ".     .                         .'         `.__,.',.----,";
 		}
 		if (i == 8)
 		{
-			cout << "         "
-				 << " \\                                          /   ,'";
+			cout << "         " << " \\                                          /   ,'";
 		}
 
-		cout << endl
-			 << "  ";
+		cout << endl << "  ";
 
 		for (int j = 1; j < 9; j++)
 		{
@@ -162,68 +143,39 @@ void repBoard(char **a, int m, int n, int px, int py, int x1, int y1, int x2, in
 		cout << "         ";
 		if (check && i == 1)
 		{
-			cout << "         "
-				 << "         "
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "         "
-				 << "         "
-				 << "|"
-				 << "       "
-				 << "|";
+			cout << "         " << "         " << "|" << "       " << "|" << "         " << "         " << "|" << "       " << "|";
 		}
 		else if (check)
 		{
-			cout << "         "
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "         "
-				 << "|"
-				 << "       "
-				 << "|";
+			cout << "         " << "|" << "       " << "|" << "|" << "       " << "|" << "|" << "       " << "|" << "         " << "|" << "       " << "|";
 		}
 		SetConsoleTextAttribute(color, 0x06);
 		if (i == 3)
 		{
-			cout << "         "
-				 << "           ,...,.\"'             `--.---'";
+			cout << "         " << "           ,...,.\"'             `--.---'";
 		}
 		if (i == 4)
 		{
-			cout << "         "
-				 << "     ,  j    _   \\        .'  .,   `.     |";
+			cout << "         " << "     ,  j    _   \\        .'  .,   `.     |";
 		}
 		if (i == 5)
 		{
-			cout << "         "
-				 << "|        .\\                        /  |         \\";
+			cout << "         " << "|        .\\                        /  |         \\";
 		}
 		if (i == 6)
 		{
-			cout << "         "
-				 << "  ` /  ,'                        |    `              |";
+			cout << "         " << "  ` /  ,'                        |    `              |";
 		}
 		if (i == 7)
 		{
-			cout << "         "
-				 << "|      `.                     ,'             .-\"\"      /";
+			cout << "         " << "|      `.                     ,'             .-\"\"      /";
 		}
 		if (i == 8)
 		{
-			cout << "         "
-				 << "  \\                                        /  ,'";
+			cout << "         " << "  \\                                        /  ,'";
 		}
 
-		cout << endl
-			 << "  ";
+		cout << endl << "  ";
 		SetConsoleTextAttribute(color, 0x07);
 
 		for (int j = 1; j < 9; j++)
@@ -268,68 +220,39 @@ void repBoard(char **a, int m, int n, int px, int py, int x1, int y1, int x2, in
 		cout << "         ";
 		if (check && i == 1)
 		{
-			cout << "         "
-				 << "         "
-				 << "|"
-				 << "   W   "
-				 << "|"
-				 << "         "
-				 << "         "
-				 << "|"
-				 << "   R   "
-				 << "|";
+			cout << "         " << "         " << "|" << "   W   " << "|" << "         " << "         " << "|" << "   R   " << "|";
 		}
 		else if (check)
 		{
-			cout << "         "
-				 << "|"
-				 << "   A   "
-				 << "|"
-				 << "|"
-				 << "   S   "
-				 << "|"
-				 << "|"
-				 << "   D   "
-				 << "|"
-				 << "         "
-				 << "|"
-				 << "   F   "
-				 << "|";
+			cout << "         " << "|" << "   A   " << "|" << "|" << "   S   " << "|" << "|" << "   D   " << "|" << "         " << "|" << "   F   " << "|";
 		}
 		SetConsoleTextAttribute(color, 0x06);
 		if (i == 3)
 		{
-			cout << "         "
-				 << "         /,..,'                     `.";
+			cout << "         " << "         /,..,'                     `.";
 		}
 		if (i == 4)
 		{
-			cout << "         "
-				 << "   ,'   |        |  ____  |         | .\"--+,^.";
+			cout << "         " << "   ,'   |        |  ____  |         | .\"--+,^.";
 		}
 		if (i == 5)
 		{
-			cout << "         "
-				 << "|         `\\                     ,'   |          \\";
+			cout << "         " << "|         `\\                     ,'   |          \\";
 		}
 		if (i == 6)
 		{
-			cout << "         "
-				 << "   /  /                          |     \\             |";
+			cout << "         " << "   /  /                          |     \\             |";
 		}
 		if (i == 7)
 		{
-			cout << "         "
-				 << "|        `._               _.'               |        /";
+			cout << "         " << "|        `._               _.'               |        /";
 		}
 		if (i == 8)
 		{
-			cout << "         "
-				 << "   \\                                      / ,'";
+			cout << "         " << "   \\                                      / ,'";
 		}
 
-		cout << endl
-			 << "  ";
+		cout << endl << "  ";
 
 		for (int j = 1; j < 9; j++)
 		{
@@ -370,68 +293,39 @@ void repBoard(char **a, int m, int n, int px, int py, int x1, int y1, int x2, in
 		cout << "         ";
 		if (check && i == 1)
 		{
-			cout << "         "
-				 << "         "
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "         "
-				 << "         "
-				 << "|"
-				 << "       "
-				 << "|";
+			cout << "         " << "         " << "|" << "       " << "|" << "         " << "         " << "|" << "       " << "|";
 		}
 		else if (check)
 		{
-			cout << "         "
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "         "
-				 << "|"
-				 << "       "
-				 << "|";
+			cout << "         " << "|" << "       " << "|" << "|" << "       " << "|" << "|" << "       " << "|" << "         " << "|" << "       " << "|";
 		}
 		SetConsoleTextAttribute(color, 0x06);
 		if (i == 3)
 		{
-			cout << "         "
-				 << "       ,'  .'                         `.";
+			cout << "         " << "       ,'  .'                         `.";
 		}
 		if (i == 4)
 		{
-			cout << "         "
-				 << "  /     |`-....-',-'    `._`--....-' _/      |";
+			cout << "         " << "  /     |`-....-',-'    `._`--....-' _/      |";
 		}
 		if (i == 5)
 		{
-			cout << "         "
-				 << "|          |                    |   ,-|           `.";
+			cout << "         " << "|          |                    |   ,-|           `.";
 		}
 		if (i == 6)
 		{
-			cout << "         "
-				 << "  /  |                           |      \\           /";
+			cout << "         " << "  /  |                           |      \\           /";
 		}
 		if (i == 7)
 		{
-			cout << "         "
-				 << "|           `---.......,--\"                  |      ,'";
+			cout << "         " << "|           `---.......,--\"                  |      ,'";
 		}
 		if (i == 8)
 		{
-			cout << "         "
-				 << "    `.                                   ,+'";
+			cout << "         " << "    `.                                   ,+'";
 		}
 
-		cout << endl
-			 << "  ";
+		cout << endl << "  ";
 
 		for (int j = 1; j < 9; j++)
 		{
@@ -448,62 +342,45 @@ void repBoard(char **a, int m, int n, int px, int py, int x1, int y1, int x2, in
 		cout << "         ";
 		if (check && i == 1)
 		{
-			cout << "         "
-				 << "         "
-				 << " ------- "
-				 << "         "
-				 << "         "
-				 << " ------- ";
+			cout << "         " << "         " << " ------- " << "         " << "         " << " ------- ";
 		}
 		else if (check)
 		{
-			cout << "         "
-				 << " ------- "
-				 << " ------- "
-				 << " ------- "
-				 << "         "
-				 << " ------- ";
+			cout << "         " << " ------- " << " ------- " << " ------- " << "         " << " ------- ";
 		}
 		SetConsoleTextAttribute(color, 0x06);
 		if (i == 3)
 		{
-			cout << "         "
-				 << "      j   /                             `.";
+			cout << "         " << "      j   /                             `.";
 		}
 		if (i == 4)
 		{
-			cout << "         "
-				 << " /      |     _,'          `--..__  `        '";
+			cout << "         " << " /      |     _,'          `--..__  `        '";
 		}
 		if (i == 5)
 		{
-			cout << "         "
-				 << ".         ,'                    |-\"'  |             \\";
+			cout << "         " << ".         ,'                    |-\"'  |             \\";
 		}
 		if (i == 6)
 		{
-			cout << "         "
-				 << " /   |                           |       `.       _,";
+			cout << "         " << " /   |                           |       `.       _,";
 		}
 		if (i == 7)
 		{
-			cout << "         "
-				 << "'                                            '    ,'";
+			cout << "         " << "'                                            '    ,'";
 		}
 		if (i == 8)
 		{
-			cout << "         "
-				 << "      >._______________________________,'";
-			// cout << "         " << "      >.                               ,'";
+			cout << "         " << "      >._______________________________,'";
+			//cout << "         " << "      >.                               ,'";
 		}
 
-		cout << endl
-			 << "  ";
+		cout << endl << "  ";
 		set_color(0x07);
 		check = false;
 	}
 }
-void repBoardHidden(char **a, int m, int n, int px, int py, int x1, int y1, int x2, int y2)
+void repBoardHidden(char** a, int m, int n, int px, int py, int x1, int y1, int x2, int y2)
 {
 	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE); // draw color
 	SetConsoleTextAttribute(color, 0x0C);
@@ -537,60 +414,43 @@ void repBoardHidden(char **a, int m, int n, int px, int py, int x1, int y1, int 
 		cout << "         ";
 		if (check && i == 1)
 		{
-			cout << "         "
-				 << "         "
-				 << " ------- "
-				 << "         "
-				 << "         "
-				 << " ------- ";
+			cout << "         " << "         " << " ------- " << "         " << "         " << " ------- ";
 		}
 		else if (check)
 		{
-			cout << "         "
-				 << " ------- "
-				 << " ------- "
-				 << " ------- "
-				 << "         "
-				 << " ------- ";
+			cout << "         " << " ------- " << " ------- " << " ------- " << "         " << " ------- ";
 		}
 		SetConsoleTextAttribute(color, 0x06);
 		if (i == 3)
 		{
-			cout << "         "
-				 << "                   _,..-----+-\".\".-'_,..";
+			cout << "         " << "                   _,..-----+-\".\".-'_,..";
 		}
 		if (i == 4)
 		{
-			cout << "         "
-				 << "      |  /,----._           ,.----.       .";
+			cout << "         " << "      |  /,----._           ,.----.       .";
 		}
 		if (i == 5)
 		{
-			cout << "         "
-				 << "j       | ,-\"'    `    .'         `. `        `.";
+			cout << "         " << "j       | ,-\"'    `    .'         `. `        `.";
 		}
 		if (i == 6)
 		{
-			cout << "         "
-				 << " \\       /                      `.    |              .";
+			cout << "         " << " \\       /                      `.    |              .";
 		}
 		if (i == 7)
 		{
-			cout << "         "
-				 << ".     .                         .'         `.__,.',.----,";
+			cout << "         " << ".     .                         .'         `.__,.',.----,";
 		}
 		if (i == 8)
 		{
-			cout << "         "
-				 << " \\                                          /   ,'";
+			cout << "         " << " \\                                          /   ,'";
 		}
 
-		cout << endl
-			 << "  ";
+		cout << endl << "  ";
 
 		for (int j = 1; j < 9; j++)
 		{
-			if (a[i][j] != ' ') // draw all white only draw color with x1, x2
+			if (a[i][j] != ' ')// draw all white only draw color with x1, x2
 			{
 				if ((i == x1 && j == y1) || (i == x2 && j == y2))
 				{
@@ -635,73 +495,44 @@ void repBoardHidden(char **a, int m, int n, int px, int py, int x1, int y1, int 
 		cout << "         ";
 		if (check && i == 1)
 		{
-			cout << "         "
-				 << "         "
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "         "
-				 << "         "
-				 << "|"
-				 << "       "
-				 << "|";
+			cout << "         " << "         " << "|" << "       " << "|" << "         " << "         " << "|" << "       " << "|";
 		}
 		else if (check)
 		{
-			cout << "         "
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "         "
-				 << "|"
-				 << "       "
-				 << "|";
+			cout << "         " << "|" << "       " << "|" << "|" << "       " << "|" << "|" << "       " << "|" << "         " << "|" << "       " << "|";
 		}
 		SetConsoleTextAttribute(color, 0x06);
 		if (i == 3)
 		{
-			cout << "         "
-				 << "           ,...,.\"'             `--.---'";
+			cout << "         " << "           ,...,.\"'             `--.---'";
 		}
 		if (i == 4)
 		{
-			cout << "         "
-				 << "     ,  j    _   \\        .'  .,   `.     |";
+			cout << "         " << "     ,  j    _   \\        .'  .,   `.     |";
 		}
 		if (i == 5)
 		{
-			cout << "         "
-				 << "|        .\\                        /  |         \\";
+			cout << "         " << "|        .\\                        /  |         \\";
 		}
 		if (i == 6)
 		{
-			cout << "         "
-				 << "  ` /  ,'                        |    `              |";
+			cout << "         " << "  ` /  ,'                        |    `              |";
 		}
 		if (i == 7)
 		{
-			cout << "         "
-				 << "|      `.                     ,'             .-\"\"      /";
+			cout << "         " << "|      `.                     ,'             .-\"\"      /";
 		}
 		if (i == 8)
 		{
-			cout << "         "
-				 << "  \\                                        /  ,'";
+			cout << "         " << "  \\                                        /  ,'";
 		}
 
-		cout << endl
-			 << "  ";
+		cout << endl << "  ";
 		SetConsoleTextAttribute(color, 0x07);
 
 		for (int j = 1; j < 9; j++)
 		{
-			if (a[i][j] != ' ') // draw all white only draw color with x1, x2
+			if (a[i][j] != ' ')// draw all white only draw color with x1, x2
 			{
 				if ((i == x1 && j == y1) || (i == x2 && j == y2))
 				{
@@ -746,72 +577,43 @@ void repBoardHidden(char **a, int m, int n, int px, int py, int x1, int y1, int 
 		cout << "         ";
 		if (check && i == 1)
 		{
-			cout << "         "
-				 << "         "
-				 << "|"
-				 << "   W   "
-				 << "|"
-				 << "         "
-				 << "         "
-				 << "|"
-				 << "   R   "
-				 << "|";
+			cout << "         " << "         " << "|" << "   W   " << "|" << "         " << "         " << "|" << "   R   " << "|";
 		}
 		else if (check)
 		{
-			cout << "         "
-				 << "|"
-				 << "   A   "
-				 << "|"
-				 << "|"
-				 << "   S   "
-				 << "|"
-				 << "|"
-				 << "   D   "
-				 << "|"
-				 << "         "
-				 << "|"
-				 << "   F   "
-				 << "|";
+			cout << "         " << "|" << "   A   " << "|" << "|" << "   S   " << "|" << "|" << "   D   " << "|" << "         " << "|" << "   F   " << "|";
 		}
 		SetConsoleTextAttribute(color, 0x06);
 		if (i == 3)
 		{
-			cout << "         "
-				 << "         /,..,'                     `.";
+			cout << "         " << "         /,..,'                     `.";
 		}
 		if (i == 4)
 		{
-			cout << "         "
-				 << "   ,'   |        |  ____  |         | .\"--+,^.";
+			cout << "         " << "   ,'   |        |  ____  |         | .\"--+,^.";
 		}
 		if (i == 5)
 		{
-			cout << "         "
-				 << "|         `\\                     ,'   |          \\";
+			cout << "         " << "|         `\\                     ,'   |          \\";
 		}
 		if (i == 6)
 		{
-			cout << "         "
-				 << "   /  /                          |     \\             |";
+			cout << "         " << "   /  /                          |     \\             |";
 		}
 		if (i == 7)
 		{
-			cout << "         "
-				 << "|        `._               _.'               |        /";
+			cout << "         " << "|        `._               _.'               |        /";
 		}
 		if (i == 8)
 		{
-			cout << "         "
-				 << "   \\                                      / ,'";
+			cout << "         " << "   \\                                      / ,'";
 		}
 
-		cout << endl
-			 << "  ";
+		cout << endl << "  ";
 
 		for (int j = 1; j < 9; j++)
 		{
-			if (a[i][j] != ' ') // draw all white only draw color with x1, x2
+			if (a[i][j] != ' ')// draw all white only draw color with x1, x2
 			{
 				if ((i == x1 && j == y1) || (i == x2 && j == y2))
 				{
@@ -857,72 +659,43 @@ void repBoardHidden(char **a, int m, int n, int px, int py, int x1, int y1, int 
 		cout << "         ";
 		if (check && i == 1)
 		{
-			cout << "         "
-				 << "         "
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "         "
-				 << "         "
-				 << "|"
-				 << "       "
-				 << "|";
+			cout << "         " << "         " << "|" << "       " << "|" << "         " << "         " << "|" << "       " << "|";
 		}
 		else if (check)
 		{
-			cout << "         "
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "|"
-				 << "       "
-				 << "|"
-				 << "         "
-				 << "|"
-				 << "       "
-				 << "|";
+			cout << "         " << "|" << "       " << "|" << "|" << "       " << "|" << "|" << "       " << "|" << "         " << "|" << "       " << "|";
 		}
 		SetConsoleTextAttribute(color, 0x06);
 		if (i == 3)
 		{
-			cout << "         "
-				 << "       ,'  .'                         `.";
+			cout << "         " << "       ,'  .'                         `.";
 		}
 		if (i == 4)
 		{
-			cout << "         "
-				 << "  /     |`-....-',-'    `._`--....-' _/      |";
+			cout << "         " << "  /     |`-....-',-'    `._`--....-' _/      |";
 		}
 		if (i == 5)
 		{
-			cout << "         "
-				 << "|          |                    |   ,-|           `.";
+			cout << "         " << "|          |                    |   ,-|           `.";
 		}
 		if (i == 6)
 		{
-			cout << "         "
-				 << "  /  |                           |      \\           /";
+			cout << "         " << "  /  |                           |      \\           /";
 		}
 		if (i == 7)
 		{
-			cout << "         "
-				 << "|           `---.......,--\"                  |      ,'";
+			cout << "         " << "|           `---.......,--\"                  |      ,'";
 		}
 		if (i == 8)
 		{
-			cout << "         "
-				 << "    `.                                   ,+'";
+			cout << "         " << "    `.                                   ,+'";
 		}
 
-		cout << endl
-			 << "  ";
+		cout << endl << "  ";
 
 		for (int j = 1; j < 9; j++)
 		{
-			if (a[i][j] != ' ') // draw all white only draw color with x1, x2, y1, y2
+			if (a[i][j] != ' ')// draw all white only draw color with x1, x2, y1, y2
 			{
 				if ((i == x1 && j == y1) || (i == x2 && j == y2))
 				{
@@ -941,57 +714,40 @@ void repBoardHidden(char **a, int m, int n, int px, int py, int x1, int y1, int 
 		cout << "         ";
 		if (check && i == 1)
 		{
-			cout << "         "
-				 << "         "
-				 << " ------- "
-				 << "         "
-				 << "         "
-				 << " ------- ";
+			cout << "         " << "         " << " ------- " << "         " << "         " << " ------- ";
 		}
 		else if (check)
 		{
-			cout << "         "
-				 << " ------- "
-				 << " ------- "
-				 << " ------- "
-				 << "         "
-				 << " ------- ";
+			cout << "         " << " ------- " << " ------- " << " ------- " << "         " << " ------- ";
 		}
 		SetConsoleTextAttribute(color, 0x06);
 		if (i == 3)
 		{
-			cout << "         "
-				 << "      j   /                             `.";
+			cout << "         " << "      j   /                             `.";
 		}
 		if (i == 4)
 		{
-			cout << "         "
-				 << " /      |     _,'          `--..__  `        '";
+			cout << "         " << " /      |     _,'          `--..__  `        '";
 		}
 		if (i == 5)
 		{
-			cout << "         "
-				 << ".         ,'                    |-\"'  |             \\";
+			cout << "         " << ".         ,'                    |-\"'  |             \\";
 		}
 		if (i == 6)
 		{
-			cout << "         "
-				 << " /   |                           |       `.       _,";
+			cout << "         " << " /   |                           |       `.       _,";
 		}
 		if (i == 7)
 		{
-			cout << "         "
-				 << "'                                            '    ,'";
+			cout << "         " << "'                                            '    ,'";
 		}
 		if (i == 8)
 		{
-			cout << "         "
-				 << "      >._______________________________,'";
-			// cout << "         " << "      >.                               ,'";
+			cout << "         " << "      >._______________________________,'";
+			//cout << "         " << "      >.                               ,'";
 		}
 
-		cout << endl
-			 << "  ";
+		cout << endl << "  ";
 		set_color(0x07);
 		check = false;
 	}
@@ -1000,7 +756,7 @@ void print_pokemon(int n_pokemon)
 {
 	// print menu and pokemon
 	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
-	switch (n_pokemon)
+	switch (n_pokemon) 
 	{
 	case 1:
 	{
@@ -1010,28 +766,23 @@ void print_pokemon(int n_pokemon)
 		cout << "                             ";
 		printf("                                           /\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "2. Play hard mode"
-			 << "                                     ";
+		cout << "2. Play hard mode" << "                                     ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("                        _,.------....___,.' ',.-.\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "3. Play fun mode"
-			 << "                                      ";
+		cout << "3. Play fun mode" << "                                      ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("                     ,-'          _,.--\"        |\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "4. Play hidden mode"
-			 << "                                   ";
+		cout << "4. Play hidden mode" << "                                   ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("                   ,'         _.-'              .\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "5. Show All Player Score"
-			 << "                              ";
+		cout << "5. Show All Player Score" << "                              ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("                  /   ,     ,'                   `\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "6. Exit Game"
-			 << "                                          ";
+		cout << "6. Exit Game" << "                                          ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("                 .   /     /                     ``.\n");
 		cout << "                                                      ";
@@ -1085,8 +836,7 @@ void print_pokemon(int n_pokemon)
 	case 2:
 	{
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "1. Play normal mode"
-			 << "                                   ";
+		cout << "1. Play normal mode" << "                                   ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("                               ,'\"`.,./.\n");
 		SetConsoleTextAttribute(color, 0x70);
@@ -1095,23 +845,19 @@ void print_pokemon(int n_pokemon)
 		cout << "                               ";
 		printf("                             ,'        Y',\"..\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "3. Play fun mode"
-			 << "                                      ";
+		cout << "3. Play fun mode" << "                                      ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("                           ,'           \\  | \\\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "4. Play hidden mode"
-			 << "                                   ";
+		cout << "4. Play hidden mode" << "                                   ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("                          /              . |  `\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "5. Show All Player Score"
-			 << "                              ";
+		cout << "5. Show All Player Score" << "                              ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("                         /               | |   \\\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "6. Exit Game"
-			 << "                                          ";
+		cout << "6. Exit Game" << "                                          ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("            __          .                | |    .\n");
 		cout << "                                                      ";
@@ -1173,13 +919,11 @@ void print_pokemon(int n_pokemon)
 	case 3:
 	{
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "1. Play normal mode"
-			 << "                                   ";
+		cout << "1. Play normal mode" << "                                   ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("                           _._       _,._\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "2. Play hard mode"
-			 << "                                     ";
+		cout << "2. Play hard mode" << "                                     ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("                        _.'   `. ' .'   _`.\n");
 		SetConsoleTextAttribute(color, 0x70);
@@ -1188,18 +932,15 @@ void print_pokemon(int n_pokemon)
 		cout << "                                ";
 		printf("                ,\"\"\"/`\"\"-.-.,/. ` V'\\-,`.,--/\"\"\".\"-..\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "4. Play hidden mode"
-			 << "                                   ";
+		cout << "4. Play hidden mode" << "                                   ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("              ,'    `...,' . ,\\-----._|     `.   /   \\\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "5. Show All Player Score"
-			 << "                              ";
+		cout << "5. Show All Player Score" << "                              ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("             `.            .`  -'`\"\" .._   :> `-'   `.\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "6. Exit Game"
-			 << "                                          ";
+		cout << "6. Exit Game" << "                                          ";
 		SetConsoleTextAttribute(color, 0x02);
 		printf("            ,'  ,-.  _,.-'| `..___ ,'   |'-..__   .._ L\n");
 		cout << "                                                      ";
@@ -1259,18 +1000,15 @@ void print_pokemon(int n_pokemon)
 	case 4:
 	{
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "1. Play normal mode"
-			 << "                                     ";
+		cout << "1. Play normal mode" << "                                     ";
 		SetConsoleTextAttribute(color, 0x05);
 		printf("                    __.._\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "2. Play hard mode"
-			 << "                                       ";
+		cout << "2. Play hard mode" << "                                       ";
 		SetConsoleTextAttribute(color, 0x05);
 		printf("                ,--'     \"`-._    _,.-,--------.\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "3. Play fun mode"
-			 << "                                        ";
+		cout << "3. Play fun mode" << "                                        ";
 		SetConsoleTextAttribute(color, 0x05);
 		printf("    ________ ,-'              `-\"'   /     _.-'|\n");
 		SetConsoleTextAttribute(color, 0x70);
@@ -1279,13 +1017,11 @@ void print_pokemon(int n_pokemon)
 		cout << "                               |";
 		printf(" ,-'  '     :                       .    ,'    '\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "5. Show All Player Score"
-			 << "                                ";
+		cout << "5. Show All Player Score" << "                                ";
 		SetConsoleTextAttribute(color, 0x05);
 		printf("|    '     j      _.._              |  ,'     j\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "6. Exit Game"
-			 << "                                            ";
+		cout << "6. Exit Game" << "                                            ";
 		SetConsoleTextAttribute(color, 0x05);
 		printf("L   /      |    .'    `.            |.'      /\n");
 		cout << "                                                        ";
@@ -1339,23 +1075,19 @@ void print_pokemon(int n_pokemon)
 	case 5:
 	{
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "1. Play normal mode"
-			 << "                                   ";
+		cout << "1. Play normal mode" << "                                   ";
 		SetConsoleTextAttribute(color, 0x04);
 		printf("                           _._       _,._\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "2. Play hard mode"
-			 << "                                     ";
+		cout << "2. Play hard mode" << "                                     ";
 		SetConsoleTextAttribute(color, 0x04);
 		printf("                        _.'   `. ' .'   _`.\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "3. Play fun mode"
-			 << "                                      ";
+		cout << "3. Play fun mode" << "                                      ";
 		SetConsoleTextAttribute(color, 0x04);
 		printf("              _.--\"\"`-..\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "4. Play hidden mode"
-			 << "                                   ";
+		cout << "4. Play hidden mode" << "                                   ";
 		SetConsoleTextAttribute(color, 0x04);
 		printf("            ,'          `.\n");
 		SetConsoleTextAttribute(color, 0x70);
@@ -1365,8 +1097,7 @@ void print_pokemon(int n_pokemon)
 		SetConsoleTextAttribute(color, 0x04);
 		printf("          ,'          __  `.\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "6. Exit Game"
-			 << "                                          ";
+		cout << "6. Exit Game" << "                                          ";
 		SetConsoleTextAttribute(color, 0x04);
 		printf("         /|          \" __   \\\n");
 		cout << "                                                      ";
@@ -1436,28 +1167,23 @@ void print_pokemon(int n_pokemon)
 	case 6:
 	{
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "1. Play normal mode"
-			 << "                                   ";
+		cout << "1. Play normal mode" << "                                   ";
 		SetConsoleTextAttribute(color, 0x04);
 		printf("                 .\"-,.__\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "2. Play hard mode"
-			 << "                                     ";
+		cout << "2. Play hard mode" << "                                     ";
 		SetConsoleTextAttribute(color, 0x04);
 		printf("                 `.     `.  ,\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "3. Play fun mode"
-			 << "                                      ";
+		cout << "3. Play fun mode" << "                                      ";
 		SetConsoleTextAttribute(color, 0x04);
 		printf("              .--'  .._,'\"-' `.\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "4. Play hidden mode"
-			 << "                                   ";
+		cout << "4. Play hidden mode" << "                                   ";
 		SetConsoleTextAttribute(color, 0x04);
 		printf("             .    .'         `'\n");
 		SetConsoleTextAttribute(color, 0x07);
-		cout << "5. Show All Player Score"
-			 << "                              ";
+		cout << "5. Show All Player Score" << "                              ";
 		SetConsoleTextAttribute(color, 0x04);
 		printf("             `.   /          ,'\n");
 		SetConsoleTextAttribute(color, 0x70);

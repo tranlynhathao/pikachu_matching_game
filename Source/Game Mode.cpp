@@ -311,18 +311,17 @@ void FunGame()
 		if (getCommand == 'v')// press v to enter giftcode
 		{
 			system("cls");
-			char code[10];
+			char code[20];
 			cout << "Enter giftcode: ";
-			cin.getline(code, 10);
-			if (strcmp(code, "10DIEM") == 0)
+			cin.getline(code, 20);
+			if (strcmp(code, "KINHNGHIEM") == 0)
 			{
 				for (int v = 0; v < 16; v++)
 				{
 					deleteSuggestion(a);
 				}
 			}
-			else
-				continue;
+			continue;
 		}
 		if (getCommand == 'r')
 		{
@@ -616,18 +615,17 @@ void HardGame()
 		if (getCommand == 'v')
 		{
 			system("cls");
-			char code[10];
+			char code[20];
 			cout << "Enter giftcode: ";
-			cin.getline(code, 10);
-			if (strcmp(code, "DUNGNHAPCODENUA") == 0)
+			cin.getline(code, 20);
+			if (strcmp(code, "KIENTHUC") == 0)
 			{
-				for (int v = 0; v < 32; v++)
+				for (int v = 0; v < 16; v++)
 				{
 					deleteSuggestion(a);
 				}
+				swapArr(a);
 			}
-			else
-				continue;
 		}
 		if (getCommand == 'r')
 		{
@@ -720,13 +718,7 @@ void HardGame()
 				// false all back to first array
 				while (pHead)
 				{
-					for (int i = 0; i < 10; i++)
-					{
-						for (int j = 0; j < 10; j++)
-						{
-							a[i][j] = pHead->b[i][j];
-						}
-					}
+					undo(pHead, a);
 					removeHead(pHead);
 				}
 				continue;
@@ -879,10 +871,10 @@ void HiddenGame()
 		if (getCommand == 'v') // press v to enter giftcode
 		{
 			system("cls");
-			char code[10];
+			char code[20];
 			cout << "Enter giftcode: ";
-			cin.getline(code, 10);
-			if (strcmp(code, "HAY_CHOI_DE_TRAI_NGHIEM") == 0)
+			cin.getline(code, 20);
+			if (strcmp(code, "TRAINGHIEM") == 0)
 			{
 				for (int v = 0; v < 16; v++)
 				{

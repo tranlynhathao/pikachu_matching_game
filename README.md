@@ -1,5 +1,5 @@
 # Game Tutorial
-[report](Report.pdf)
+[report](https://drive.google.com/file/d/1lKwbwGE3PF02nhRmTN10Gqr77-5Ufra4/view?usp=sharing)
 
 ---
 
